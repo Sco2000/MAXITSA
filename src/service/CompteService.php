@@ -4,7 +4,7 @@ namespace App\service;
 use App\repository\CompteRepository;
 use App\entity\Compte;
 
-class CommandeService {
+class CompteService {
     private array $commandes = [];
     private CompteRepository $compteRepository;
 
@@ -17,9 +17,9 @@ class CommandeService {
         return true;
     }
 
-    public function listerCommandes($id): null | Compte {
+    public function getSolde($id): null | Compte {
         // var_dump($id); die;
-        return $this->compteRepository->selectCommandeByOwner($id);
+        return $this->compteRepository->selectPrincipalCompte($id);
     }
 
     public function listerCommandesClients(int $id): null | Compte {

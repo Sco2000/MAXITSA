@@ -31,9 +31,9 @@ class PersonneRepository {
             if ($result === false) {
                 return null; 
             }
-            // var_dump($result); die;
             $utilisateur = new Utilisateur();
             $newUser = $utilisateur->toObject($result);
+            // var_dump($result); die;
             // var_dump($newUser); die;
             return $newUser;
             // if ($result['type'] === 'Vendeur') {

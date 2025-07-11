@@ -1,6 +1,6 @@
 <?php
 
-namespace App\core;
+namespace App\core\abstract;
 use App\core\Session;
 use App\entity\Compte;
 

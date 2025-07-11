@@ -18,6 +18,9 @@
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                     placeholder="Votre login"
                 >
+                <?php if (isset($errors['login'])): ?>
+                    <p class="text-red-500 text-sm mt-2"><?php echo $errors['login']; ?></p>
+                <?php endif; ?>
             </div>
 
             <!-- Password -->
@@ -31,6 +34,9 @@
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                     placeholder="Votre mot de passe"
                 >
+                <?php if (isset($errors['password'])): ?>
+                    <p class="text-red-500 text-sm mt-2"><?php echo $errors['password']; ?></p>
+                <?php endif; ?>
             </div>
 
             <!-- Submit Button -->

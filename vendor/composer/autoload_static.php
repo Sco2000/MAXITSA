@@ -37,6 +37,7 @@ class ComposerStaticInit7bd59fe84359f92f8b89ff23b086aed3
             'App\\router\\' => 11,
             'App\\repository\\' => 15,
             'App\\entity\\' => 11,
+            'App\\core\\abstract\\' => 18,
             'App\\core\\' => 9,
             'App\\controller\\' => 15,
         ),
@@ -83,9 +84,13 @@ class ComposerStaticInit7bd59fe84359f92f8b89ff23b086aed3
         array (
             0 => __DIR__ . '/../..' . '/src/entity',
         ),
+        'App\\core\\abstract\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/config/core/abstract',
+        ),
         'App\\core\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/config/core',
+            0 => __DIR__ . '/../..' . '/app/core',
         ),
         'App\\controller\\' => 
         array (

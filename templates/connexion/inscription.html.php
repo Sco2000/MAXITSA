@@ -23,6 +23,9 @@
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                         placeholder="Votre nom complet"
                     >
+                <?php if(isset($errors['nom'])): ?>
+                    <p class="text-red-500 text-sm"><?= $errors['nom'] ?></p>
+                <?php endif; ?>
                 </div>
     
                 <!-- Numéro de téléphone -->
@@ -36,6 +39,9 @@
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                         placeholder="Votre numéro de téléphone"
                     >
+                    <?php if(isset($errors['telephone'])): ?>
+                        <p class="text-red-500 text-sm"><?= $errors['telephone'] ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -57,6 +63,9 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                             placeholder="N° carte d'identité"
                         >
+                    <?php if(isset($errors['numero_identite'])): ?>
+                        <p class="text-red-500 text-sm"><?= $errors['numero_identite'] ?></p>
+                    <?php endif; ?>
                     </div>
         
                     <!-- Login -->
@@ -70,6 +79,9 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                             placeholder="Votre login"
                         >
+                        <?php if(isset($errors['login'])): ?>
+                            <p class="text-red-500 text-sm"><?= $errors['login'] ?></p>
+                        <?php endif; ?>
                     </div>
         
                     <!-- Mot de passe -->
@@ -83,6 +95,9 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50"
                             placeholder="Votre mot de passe"
                         >
+                    <?php if(isset($errors['password'])): ?>
+                        <p class="text-red-500 text-sm"><?= $errors['password'] ?></p>
+                    <?php endif; ?>
                     </div>
                 </div>
                 
@@ -99,6 +114,9 @@
                                 type="file" 
                                 class="text-orange-600 font-medium text-sm hover:text-orange-700 transition-colors"
                                 >
+                            <?php if(isset($errors['document'])): ?>
+                                <p class="text-red-500 text-sm"><?= $errors['document'] ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

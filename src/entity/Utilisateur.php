@@ -40,7 +40,6 @@ class Utilisateur
 {
     private int $id;
     private string $nom;
-    private string $prenom;
     private string $login;
     private string $password;
     private string $numerocarteIdentite;
@@ -56,10 +55,9 @@ class Utilisateur
     //     $this->$att = $val;
     // }
 
-    public function __construct(int $id=0, string $nom='', string $prenom='', string $login='', string $password='', int $numerocarteIdentite=0, string $photo='', Profil $profil = new Profil()) {
+    public function __construct(int $id=0, string $nom='', string $login='', string $password='', int $numerocarteIdentite=0, string $photo='', Profil $profil = new Profil()) {
         $this->id = $id;
         $this->nom = $nom;
-        $this->prenom = $prenom;
         $this->login = $login;
         $this->password = $password;
         $this->numerocarteIdentite = $numerocarteIdentite;
@@ -83,15 +81,6 @@ class Utilisateur
 
     public function setNom(string $nom): bool {
         $this->nom = $nom;
-        return true;
-    }
-
-   public function getPrenom(): string {
-        return $this->prenom;
-    }
-
-    public function setPrenom(string $prenom): bool {
-        $this->prenom = $prenom;
         return true;
     }
 
@@ -151,7 +140,6 @@ class Utilisateur
         return [
             'id' => $this->id,
             'nom' => $this->nom,
-            'prenom' => $this->prenom,
             'login' => $this->login,
             'password' => $this->password,
             'numerocarteIdentite' => $this->numerocarteIdentite,
@@ -165,7 +153,6 @@ class Utilisateur
         $object = new static();
         $object->setId($data['id']);
         $object->setNom($data['nom']);
-        $object->setPrenom($data['prenom']);
         $object->setLogin($data['login']);
         $object->setPassword($data['password']);
         $object->setNumerocarteIdentite($data['numerocarteidentite']);

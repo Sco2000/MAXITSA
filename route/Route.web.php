@@ -2,27 +2,27 @@
 
 namespace App\router;
 
-use App\controller\CommandeController;
+use App\controller\CompteController;
 use App\controller\SecurityController;
 use App\controller\SecurityControlleur;
 
 $routes = [
         '/add-commande' => [
-            'controller' => CommandeController::class,
+            'controller' => CompteController::class,
             'method'=> 'create',
             'middlewares' => ['auth', 'isVendeur']
         ],
         '/list-commande' => [
-            'controller' => CommandeController::class,
+            'controller' => CompteController::class,
             'method'=> 'index',
-            'middleware' => ['auth']
+            // 'middleware' => ['auth']
         ],
         '/' => [
             'controller' => SecurityController::class,
             'method'=> 'index'
         ],
         '/valide-commande' => [
-            'controller' => CommandeController::class,
+            'controller' => CompteController::class,
             'method'=> 'create'
         ],
         '/login' => [

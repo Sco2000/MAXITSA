@@ -1,11 +1,11 @@
 <?php
 
 namespace App\core;
-use App\controller\CommandeController;
+use App\controller\CompteController;
 use App\core\ErrorController;
 use App\controller\SecurityController;
 
-require_once '../config/core/middlewares.php';
+require_once '../app/core/middlewares.php';
 
 class Routeur {
     public static function resolveRoute(array $URI){

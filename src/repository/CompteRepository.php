@@ -85,7 +85,7 @@ class CompteRepository{
     //     }
     // }
 
-    public function selectCommandeByOwner($id): null | Compte{
+    public function selectPrincipalCompte($id): null | Compte{
         $dsn = "mysql:host=localhost;dbname=gestion_commercial;charset=utf8mb4";
         try {
             // var_dump($id); die;

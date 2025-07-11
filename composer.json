@@ -6,7 +6,8 @@
             "App\\entity\\": "src/entity/",
             "App\\service\\": "src/service/",
             "App\\repository\\": "src/repository/",
-            "App\\core\\": "config/core/",
+            "App\\core\\": "app/core/",
+            "App\\core\\abstract\\": "config/core/abstract",
             "App\\controller\\": "src/controller/",
             "App\\router\\": "route/"
         }
@@ -21,3 +22,4 @@
         "vlucas/phpdotenv": "^5.6"
     }
 }
+

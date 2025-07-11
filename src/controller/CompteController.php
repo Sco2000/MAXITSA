@@ -1,20 +1,20 @@
 <?php
 namespace App\controller;
 use App\service\PersonneService;
-use App\service\CommandeService;
-use App\core\AbstractController ;
+use App\service\CompteService;
+use App\core\abstract\AbstractController ;
 use App\core\Session;
 
-class CommandeController extends AbstractController
+class CompteController extends AbstractController
 {
-    private CommandeService $commandeService;
+    private CompteService $compteService;
     private PersonneService $personneService;
 
     public function __construct()
     {
         parent::__construct();
         $this->personneService = new PersonneService();
-        $this->commandeService = new CommandeService();
+        $this->compteService = new CompteService();
     }
 
     public function create (){
@@ -22,12 +22,13 @@ class CommandeController extends AbstractController
     }
     public function index(){
         $user = $this->session->get('user');
-        if($user){
-            $type = $user["type"];
-        }
-        $id = $user['id'];
+        // var_dump($user); die;
+        // if($user){
+        //     $type = $user["type"];
+        // }
+        $id = $user->getId();
         // var_dump($id); die;
-        $data = $this->commandeService->listerCommandes($id);
+        $data = $this->compteService->getSolde($id);
         // var_dump($type); die;
         // if($type == "vendeur"){
         //     $data = $this->commandeService->listerCommandes();

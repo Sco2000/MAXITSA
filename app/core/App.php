@@ -4,7 +4,7 @@ namespace App\core;
 use App\service\PersonneService;
 use App\service\SecurityService;
 use App\service\ProduitService;
-use App\service\CommandeService;
+use App\service\CompteService;
 use App\repository\PersonneRepository;
 use App\repository\ProduitRepository;
 use App\repository\CompteRepository;
@@ -15,7 +15,7 @@ class App
         'PersonneService' => PersonneService::class,
         'SecurityService' => SecurityService::class,
         'ProduitService' => ProduitService::class,
-        'CommandeService' => CommandeService::class,
+        'CompteService' => CompteService::class,
         'PersonneRepository' => PersonneRepository::class,
         'ProduitRepository' => ProduitRepository::class,
         'CompteRepository' => CompteRepository::class
