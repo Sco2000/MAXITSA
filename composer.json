@@ -1,0 +1,23 @@
+{
+    "name": "gestion/composer",
+    "description": "gestion commercial cas auchan",
+    "autoload": {
+        "psr-4": {
+            "App\\entity\\": "src/entity/",
+            "App\\service\\": "src/service/",
+            "App\\repository\\": "src/repository/",
+            "App\\core\\": "config/core/",
+            "App\\controller\\": "src/controller/",
+            "App\\router\\": "route/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sco2000",
+            "email": "ousmanemarra70@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
